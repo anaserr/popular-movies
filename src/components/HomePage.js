@@ -76,7 +76,6 @@ const HomePage = () => {
                     setHasNext(false)
                 }
                 setLoading(false)
-                console.log(res.data.results)
             }
             
         })
@@ -92,7 +91,7 @@ const HomePage = () => {
                         <IconButton edge="start" className={classes.homeButton} color="inherit" aria-label="home" href="/">
                             <HomeIcon />
                         </IconButton>
-                        <Typography variant="h6" className={classes.title}>Best Movie List</Typography>
+                        <Typography variant="h6" className={classes.title}>Most Popular Movies</Typography>
                     </Toolbar>
                 </AppBar>
             </header>
@@ -102,7 +101,7 @@ const HomePage = () => {
                         <MovieItem key={item.id} movie={item} ref={lastElement}/> :
                         <MovieItem key={item.id} movie={item} />
                 })}
-                {loading && <Box justifyContent="center"><img src="https://media.giphy.com/media/y1ZBcOGOOtlpC/source.gif"/></Box>}
+                {loading && <Box justifyContent="center"><img src="https://media.giphy.com/media/y1ZBcOGOOtlpC/source.gif" alt="loading.."/></Box>}
             </Container>
         </div>
     );
